@@ -17,4 +17,4 @@ where = ["."]
 provides = ["othello"]
 
 [project.scripts]
-othello = "src.main:main"
+othello = "othello.main:main"
