@@ -1,19 +1,17 @@
-from typing import Optional, cast
-from enums.game_result import GameResult
-from enums.player import Player
-from enums.color import Color, get_color
-
-from ui.component.tile import Tile
-from models.board import Board
-from game.bot import Bot
-from game.game import Game
-
 import sys
+from typing import Optional, cast
+from othello.models.game_result import GameResult
+from othello.models.player import Player
+from othello.models.color import Color, get_color
+
+from othello.ui.component.tile import Tile
+from othello.models.board import Board
+from othello.game.bot import Bot
+from othello.game.game import Game
 
 from PyQt5.QtWidgets import (
-    QWidget, 
-    QHBoxLayout, 
-    QLabel, 
+    QWidget,
+    QLabel,
     QHBoxLayout, 
     QGridLayout, 
     QVBoxLayout,
@@ -60,21 +58,21 @@ class GameWindow(QWidget):
         for row in range(8):
             for col in range(8):
                 button: Tile = Tile(None, (row, col))
-                
+
                 if (row + col) % 2 == 0:
-                    button.setStyleSheet("background-color: green;")  
+                    button.setStyleSheet("background-color: green;")
                 else:
                     button.setStyleSheet("background-color: darkgreen;")
-                
+
                 if (row == 2 and col == 3) or (row == 3 and col == 2) \
                 or (row == 4 and col == 5) or (row == 5 and col == 4):
                     button.set_color(Color.GRAY)
-                
+
                 if (row == 3 and col == 3) or (row == 4 and col == 4):
                     button.set_color(Color.WHITE)
                 if (row == 3 and col == 4) or (row == 4 and col == 3):
-                    button.set_color(Color.BLACK) 
-                
+                    button.set_color(Color.BLACK)
+
                 button.clicked.connect(self.handle_click)
 
                 self.grid.addWidget(button, row, col)
@@ -154,5 +152,5 @@ class GameWindow(QWidget):
         result_box.setText(f"{result}")
         result_box.setWindowTitle("Game Over")
         result_box.setStandardButtons(QMessageBox.Ok)
-        
+
         result_box.exec_()

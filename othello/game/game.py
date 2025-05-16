@@ -1,8 +1,8 @@
-from models.board import Board
 from typing import Optional
-from enums.game_result import GameResult
-from enums.player import Player, get_opponent
-import util.matrix as Matrix
+from othello.models.board import Board
+from othello.models.game_result import GameResult
+from othello.models.player import Player, get_opponent
+import othello.util.matrix as Matrix
 
 class Game:
     """Othello game static class. It stores all possible moves, current player and number of tiles for each player.
@@ -279,7 +279,7 @@ class Game:
             bool: True if the position is within the board's boundaries; 
                 False if it is outside.
         """
-        return (position[0] >= 0 and position[0] < Board.SIZE) and (position[1] >= 0 and position[1] < Board.SIZE)
+        return (0 <= position[0] < Board.SIZE) and (0 <= position[1] < Board.SIZE)
     
     @staticmethod
     def __get_opponents_in_dir(board: Board, player: Player, position: tuple[int, int], direction: tuple[int, int]) -> list[tuple[int, int]]:

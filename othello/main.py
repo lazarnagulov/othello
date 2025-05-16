@@ -1,7 +1,7 @@
 from typing import Optional
-from ui.console_interface import ConsoleInterface
-from ui.user_interface import UserInterface
-from ui.gui import GUI
+from othello.ui.console_interface import ConsoleInterface
+from othello.ui.user_interface import UserInterface
+from othello.ui.gui import GUI
 import sys
 
 def main() -> None:

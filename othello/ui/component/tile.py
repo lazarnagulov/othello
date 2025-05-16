@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QPushButton
 from PyQt5.QtCore import QSize, QPoint
 from PyQt5.QtGui import QPainter, QColor, QPaintEvent
 
-from enums.color import Color
+from othello.models.color import Color
 
 
 class Tile(QPushButton):

@@ -18,38 +18,52 @@ This Python implementation originally featured a console-only mode for Player vs
 ## Recent Updates
 - **21.9.2024**: Revisited and updated the project.
 - **23.9.2024**: Added GUI and Player vs Player mode.
+- **16.5.2025**: Migrated from setuptools to pyproject.
 
-## Usage
-To run the application, ensure you have **PyQt5** installed:
+## Getting started
+
+Make sure you have Python 3.10 installed on your system before running this project. 
+
+You can check your Python version by running the following command:
 
 ```bash
-pip install -r requirements.txt 
+python --version
 ```
 
-## Launching the Application
+Clone repository
+```bash
+git clone https://github.com/lazarnagulov/othello.git
+```
+*Optional*: Install virtual environment.
+
+Install othello with pip:
+```bash
+pip install .
+```
+
 Run the application with the following command for the default option (GUI: Player vs Bot):
 ```
-python3 ./src/main.py
+othello
 ```
 
-## Command Options
+## Game Customisation
 
 You can customize your game mode with the following command-line options:
 - **Console** Player vs Bot
 ```
-python3 ./src/main.py [--console | -c] [--bot | -b]
+othello [--console | -c] [--bot | -b]
 ```
 - **Console** Player vs Player
 ```
-python3 ./src/main.py [--console | -c] [--player | -p]
+othello [--console | -c] [--player | -p]
 ```
 - **GUI** Player vs Bot
 ```
-python3 ./src/main.py [--gui | -g] [--bot | -b]
+othello [--gui | -g] [--bot | -b]
 ```
 - **GUI** Player vs Player
 ```
-python3 ./src/main.py [--gui | -g] [--player | -p]
+othello [--gui | -g] [--player | -p]
 ```
 ## Dependencies
 - **PyQt5**: Required for the GUI.

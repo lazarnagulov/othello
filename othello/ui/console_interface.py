@@ -1,10 +1,10 @@
-from enums.player import Player
-from enums.board_symbol import BoardSymbol, get_symbol
-from enums.game_result import GameResult
-from game.game import Game
-from game.bot import Bot
-from models.board import Board
 from typing import Optional
+from othello.models.player import Player
+from othello.models.board_symbol import BoardSymbol, get_symbol
+from othello.models.game_result import GameResult
+from othello.game.game import Game
+from othello.game.bot import Bot
+from othello.models.board import Board
 
 from .user_interface import UserInterface
 
