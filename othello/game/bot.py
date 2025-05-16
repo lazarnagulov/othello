@@ -1,9 +1,9 @@
-from models.board import Board
-from game.game import Game
-from enums.player import Player, get_opponent
+import time
 from math import inf
 from typing import Optional
-import time
+from othello.models.board import Board
+from othello.game.game import Game
+from othello.models.player import Player, get_opponent
 
 class Bot:
     

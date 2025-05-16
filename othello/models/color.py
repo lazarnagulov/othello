@@ -1,5 +1,5 @@
 from enum import Enum
-from enums.player import Player
+from othello.models.player import Player
 
 class Color(Enum):
     """Enumeration representing the colors used in the game.

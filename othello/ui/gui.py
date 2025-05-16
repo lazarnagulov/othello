@@ -1,9 +1,8 @@
+import sys
 from pathlib import Path
 
-from ui.component.game_window import GameWindow
-from ui.user_interface import UserInterface
-
-import sys
+from othello.ui.component.game_window import GameWindow
+from othello.ui.user_interface import UserInterface
 
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtGui import QIcon

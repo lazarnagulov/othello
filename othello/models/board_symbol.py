@@ -1,5 +1,5 @@
-from enums.player import Player
 from enum import Enum
+from othello.models.player import Player
 
 class BoardSymbol(Enum):
     """Enumeration representing symbols used on the game board.

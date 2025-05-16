@@ -18,6 +18,7 @@ This Python implementation originally featured a console-only mode for Player vs
 ## Recent Updates
 - **21.9.2024**: Revisited and updated the project.
 - **23.9.2024**: Added GUI and Player vs Player mode.
+- **16.5.2025**: Migrated from setuptools to pyproject.
 
 ## Usage
 To run the application, ensure you have **PyQt5** installed:

@@ -1,6 +1,5 @@
-from enums.player import Player
-from enums.board_symbol import BoardSymbol
-import util.matrix as Matrix
+from othello.models.player import Player
+import othello.util.matrix as Matrix
 
 class Board:
     """
